@@ -11,6 +11,8 @@ with sr.Microphone() as source:
     print()
     print("Diga Algo!")
     print()
+    s.say('Diga Algo')
+    s.runAndWait()
     audio = r.listen(source)
 
 try:
@@ -32,7 +34,6 @@ if texto == 'limpar':
 
 elif texto == 'deletar':
     s.say('Você disse' + texto)
-    s.runAndWait()
     s.say('Escolha o número da linha')
     s.runAndWait()
 
@@ -55,7 +56,7 @@ elif texto == 'deletar':
                     if ptr != numLinha:
                         fw.write(linha)
                     ptr += 1
-        print("Linha" + texto2 + "deletada")
+        print("Linha " + texto2 + " deletada")
         s.say('Linha' + texto2 + 'deletada')
         s.runAndWait()
     except:
@@ -63,3 +64,5 @@ elif texto == 'deletar':
 else:
     sys.stdout = open(file_path, "a")
     print(texto)
+    s.say('Adicionando' + texto)
+    s.runAndWait()
