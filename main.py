@@ -22,9 +22,13 @@ except sr.RequestError as e:
     print("Não pôde requerir os serviços do Google Speech Recognition; {0}".format(e))
 
 
+file_path = 'teste.txt'
 s.say('Você disse' + texto)
 s.runAndWait()
 
-file_path = 'teste.txt'
-sys.stdout = open(file_path, "a")
-print(texto)
+if texto == 'limpar':
+    with open(file_path, "w") as f:
+        pass
+else:
+    sys.stdout = open(file_path, "a")
+    print(texto)
