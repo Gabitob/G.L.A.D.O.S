@@ -7,3 +7,7 @@ Essa é a G.L.A.D.O.S um programa atualmente simples que ouve o usuário e trans
 Ela sempre adicionará o texto e pulará uma linha para adicionar a próxima frase.
 
 Atualmente fala a frase que você falou para ela.
+
+Adicionada função de limpar texto inteiro.
+
+Adicionada função deletar linha específica.
